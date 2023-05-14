@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Norican&display=swap');
+
+:root{
+    --grey1: #F6F6F6;
+    --grey2: #F7F7F7;
+    --grey3: #FCFCFC;
+    --greyDark: #545454;
+    --red: #CB6B6B;
+    --blue: #6BA3CB;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,h2,h3{
+    display: inline-block;
+    width: fit-content;
+}
+
+.color-red{
+    color: var(--red);
+}
+
+.color-blue{
+    color: var(--blue);
+}
+
+.color-darkGrey{
+    color: var(--greyDark);
+}
+
+/* Header */
+
+.barra-iniziale{
+    background-color:var(--grey1);
+    margin-bottom: 5em;
+    padding-left: 1rem;
+}
+
+.barra-iniziale img{
+    float: left;
+    height: 32px;
+}
+
+.barra-iniziale h3{
+    height: 32px;
+    padding-top: 3px;
+    margin-left: 20px;
+    font-size: 20px;
+    color: var(--red);
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 1px;
+}
+
+.logo-nome{
+    height: 100px;
+    display: none;
+    margin: auto;
+    margin-bottom: 10rem;
+    /* fit contente per poterlo centrare piu' facilmente */
+    width: fit-content; 
+}
+
+.logo-nome h1{ 
+    height: fit-content;
+    font-size: 96px;
+    color: var(--red);
+    vertical-align: super;
+    margin-left: 2rem;
+    font-family: 'Anton', sans-serif;
+}
+
+
+
+/* Main */
+
+.actual-city{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.actual-city h2{
+    font-family: 'Anton', sans-serif;
+    background-color: var(--red);
+    color: white;
+    margin: 0 0 2rem 0;
+    letter-spacing: 4px;
+    font-size: 1.8rem;
+    padding: 0.5rem;
+}
+
+
+.search-bar form{
+    width: 80%;
+    /* height: 41px; */
+    display: flex;
+}
+
+.search-bar{
+    display: flex;
+    height: 30px;
+    margin: auto;
+    margin-bottom: 5rem;
+    justify-content: center;
+}
+
+.search-bar input{
+    flex: auto;
+    border: none;
+    outline: none;
+    background-color: var(--grey2);
+    height: 30px;
+    font-size: 20px;
+    padding-left: 10px;
+    color: var(--red);
+    width: 0;
+}
+
+.search-bar button{
+    padding: 0 20px;
+    background-color: var(--red);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    height: 30px;
+    font-size: 16px;
+    font-family: 'Anton', sans-serif;
+    color: var(--greyDark);
+    align-items: center;
+}
+
+.search-bar input::placeholder {
+    opacity: .48;
+    color: var(--red);
+    font-size: 20px;
+}
+
+/* ----------------------------------------------------- */
+
+.contenitore-carte{
+    width: fit-content;
+    background-color: var(--grey2);
+    margin: auto;
+    padding: 1rem;
+    border: solid 3px rgba(203, 107, 107, 0.2);
+    border-radius: 20px;
+}
+
+.grid{
+    display: block;
+    padding: 16px;
+    display: grid;
+    grid-gap: 16px;
+}
+
+.grid .card{
+    background-color: var(--grey3);
+    box-shadow: 0px 6px 8px -7px #CB6B6B;
+    padding: 16px;
+    width: 235px;
+    height: 185px;
+    margin: 1rem;
+    border-radius: 30px;
+}
+
+.grid .card h3{
+    font-family: 'Anton', sans-serif;
+    font-size: 18px;
+    padding: 0 15px;
+}
+
+
+.grid .card img{
+    height: 90px;
+    width: 90px;
+}
+
+.giorno-icona{
+    display: flex;
+    align-items: center;
+}
+
+.descrizione-meteo p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: var(--greyDark);
+    font-size: 12px;
+    margin:0 0 8px 13px;
+}
+
+/* ========================================= */
+
+
+.newsletter{
+    margin: auto;
+}
+
+.newsletter h2{
+    padding-top: 4rem;
+    font-family: 'Norican', cursive;
+    font-size: 32px;
+    color: var(--red);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+.newsletter{
+    margin: auto;
+    margin-bottom: 3rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.newsletter a{
+    margin: auto;
+    margin-bottom: 3rem;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.newsletter p{
+    background-color: var(--red);
+    color: var(--greyDark);
+    width: fit-content;
+    margin: auto;
+    padding: 0.5rem;
+}
+
+
+
+
+
+.counter {
+    width: fit-content;
+    margin: 1rem auto;
+    text-align-last: center;
+    color: var(--red);
+    font-family: 'Anton', sans-serif;
+    margin-bottom: 2rem;
+    font-size: 12px;
+}
+
+/* Footer */
+
+footer .links{
+    height: 32px;
+    width: 100%;
+    background-color: var(--grey1);
+    display: flex;
+    justify-content: center;
+}
+
+footer .links p,a{
+    font-family: 'Anton', sans-serif;
+    font-size: 15px;
+    color: var(--red);
+    text-align: center;
+    vertical-align: super;
+    padding: 0 1rem;
+}
+
+footer .links a{
+    text-decoration: none;
+}
+
+
+/* MEDIA QUERY */
+
+
+
+@media (min-width: 450px) {
+
+}   
+
+@media (min-width: 880px) {
+    .grid{
+        grid-template-columns: repeat(2, 3fr);
+    }
+    .logo-nome{
+        /* non posso mettere inline block in quanto me lo renderebbe largo quanto la pagina */
+        display: block; 
+    }
+
+    .search-bar form{
+        width: 60%;
+        height: 41px;
+    }
+
+    .search-bar button{
+        height: 41px;
+        padding: 0 50px;
+        font-size: 22px;
+    }
+
+    .search-bar input{
+        height: 41px;
+        font-size: 22px;
+    }
+
+    .search-bar{
+        margin-bottom: 10rem;
+    }
+
+    .search-bar input::placeholder {
+        font-size: 22px;
+    }
+
+    .grid .card h3{
+        font-size: 25px;
+    }
+
+    .grid .card img{
+        height: 130px;
+        width: 130px;
+    }
+
+    .grid .card p{
+        font-size: 1rem;
+    }
+
+    .grid .card{
+        width: 307px;
+        height: 251px;
+        border-radius: 43px;
+        padding-left: 30px;
+    }
+    
+}
+
+@media (min-width: 1450px) {
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid .card{
+        width: 345px;
+        height: 259px;
+    }
+}

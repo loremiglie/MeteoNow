@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://openweathermap.org">
+    <title>MeteoNow</title>
+  </head>
+  <body onload="setCounter()">
+    <header>
+      <div class="barra-iniziale">
+        <img
+          data-src="/images/logo.gif"
+          style="height: 32px; width: 32px"
+        />
+        <h3>MeteoNow</h3>
+      </div>
+      <div class="logo-nome">
+        <img
+          data-src="/images/logo.gif"
+          style="height: 100px; width: 100px"
+        />
+        <a href="/"><h1>MeteoNow</h1></a>
+        <!-- <h1 onclick=""><a href="" style="">MeteoNow</a></h1> -->
+      </div>
+    </header>
+    <main>
+      <section name="search-bar">
+        <div class="search-bar">
+          <form action="/" method="post">
+            <input type="text" name="city" placeholder="<%=city%>" />
+            <button type="submit" onclick="updateCounter()">Search</button>
+          </form>
+        </div>
+      </section>
+
+      <div class="actual-city">
+        <h2><%=city%></h2>
+      </div>
+      <section name="meteo">
+        <div class="contenitore-carte">
+          <div class="grid">
+            <%for(var i=0; i < 6; i++){ %>
+            <div class="card">
+              <div class="giorno-icona">
+                <h3 class="giorno">
+                  <span class="color-red"><%=data[i].stringa%></span><br />
+                  <span class="color-blue"><%=data[i].giorno%></span><span class="color-darkGrey">/</span><span
+                    class="color-blue"
+                    ><%=data[i].mese%></span
+                  >
+                </h3>
+                <img
+                  data-src="https://openweathermap.org/img/wn/<%= giorni[i].weather[0].icon %>@2x.png"
+                  alt="icona-meteo"
+                  class="icona-meteo"
+                />
+              </div>
+              <div class="descrizione-meteo">
+                <p class="card-descrizione">
+                  Descrizione: <%= giorni[i].weather[0].description %>
+                </p>
+
+                <p class="card-maxTemp">
+                  Temperatura massima:
+                  <span class="color-red"
+                    ><%= Math.trunc(giorni[i].temp.max) %> C°</span
+                  >
+                </p>
+                <p class="card-minTemp">
+                  Temperatura minima:
+                  <span class="color-blue"
+                    ><%= Math.trunc(giorni[i].temp.min) %> C°</span
+                  >
+                </p>
+              </div>
+            </div>
+            <%}%>
+          </div>
+        </div>
+      </section>
+      <section name="newsletter">
+        <div class="newsletter">
+          <h2>Iscriviti alla Newsletter</h2>
+          <a href="http://eepurl.com/h6hXd9" target="_blank"><p>Vai alla pagina di iscrizione</p></a>
+        </div>
+      </section>
+      <div class="counter">
+        <p >Hai effettuato <span class="color-blue" id="counter-local">0</span> ricerche su questo sito</p>
+      </div>
+    </main>
+    <footer>
+      <div class="links">
+        <p>Copyright ©</p>
+        <a href="http://t.me/MeteoNowBot"
+          >Telegram Bot<img
+            data-src="/images/telegram-logo.svg"
+            alt="Telegram Logo"
+            style="width: 14px; height: 14px"
+        /></a>
+      </div>
+    </footer>
+    <!-- <script
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+      type="text/javascript"
+    ></script> -->
+    <script src="javascript/script.js"></script>
+    <script src="javascript/workers/image-loader.js"></script>
+  </body>
+</html>
