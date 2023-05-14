@@ -1,1 +1,1 @@
-# MeteoNow
+# MeteoNow app
