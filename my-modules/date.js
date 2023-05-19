@@ -16,7 +16,7 @@ function getDayObj(day) {
     var obj = {
         stringa: stringaGiorno,
         giorno: day.getDate(),
-        mese: day.getMonth()
+        mese: day.getMonth() + 1
     }
     return obj;
 }
